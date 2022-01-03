@@ -1,0 +1,35 @@
+<form (ngSubmit)=register() #user1="ngForm">
+    <div class="mb-3">
+        <label for="exampleInputFirstname" class="form-label">First name</label>
+        <input type="text" class="form-control id=exampleInputFirstname" [(ngModel)]=user.name name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputLastname" class="form-label">Last name</label>
+        <input type="text" class="form-control id=exampleInputLastname" [(ngModel)]=user.Lname name="Lname" required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="user.email" name="email" required>
+        <div id="emailHelp" class="form-text"></div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" [(ngModel)]=user.password id="exampleInputPassword1" name="password" required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control id=exampleInputAddress" [(ngModel)]=user.Address name="Address" required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputMobile" class="form-label">Molile</label>
+        <input type="number" class="form-control id=exampleInputMobile" [(ngModel)]=user.Mobile name="Mobile" required>
+    </div>
+    <!-- <button [disabled]="register.form.invalid " value="login ">submit</button> -->
+    <button type="submit" class="btn btn-primary" [disabled]="user1.form.invalid ">register</button>
+</form>
+
+
+
+
+
+<!-- <app-register></app-register> -->
